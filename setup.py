@@ -24,6 +24,8 @@ setup(
         'nose',
         'nose-cov',
         'mock'
-    ]
+    ],
+
+    use_2to3=True
 
 )
