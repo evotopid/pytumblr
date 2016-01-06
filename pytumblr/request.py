@@ -76,7 +76,7 @@ class TumblrRequest(object):
         :returns: a dict of the json response
         """
         try:
-            data = json.loads(content)
+            data = json.loads(content.decode("utf-8"))
         except ValueError, e:
             data = {'meta': { 'status': 500, 'msg': 'Server Error'}, 'response': {"error": "Malformed JSON or HTML was returned."}}
         
